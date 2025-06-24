@@ -51,3 +51,24 @@ jobs:
         with:
           scan-type: fs
           scan-ref: DotNetFrameworkProject_CE040_CE087
+
+  docker-build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Log in to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
+      - name: Build Docker Image
+        run: |
+          docker build -t tour-management-app -f Dockerfile .
+      
+      - name: Push Docker Image (optional)
+        run: |
+          docker tag tour-management-app renshoby/tour-management-app:latest
+          docker push renshoby/tour-management-app:latest
