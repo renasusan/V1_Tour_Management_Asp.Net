@@ -37,7 +37,11 @@ jobs:
       #   run: |
       #     cmd.exe /c ""C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" DotNetFrameworkProject_CE040_CE087\Tour_Management.sln /p:Configuration=Release /p:Platform="Any CPU""
 
-      - name: Build Solution
-        run: |
-         cmd.exe /c "\"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe\" DotNetFrameworkProject_CE040_CE087\Tour_Management.sln /p:Configuration=Release /p:Platform=\"Any CPU\""
+      # - name: Build Solution
+      #   run: |
+      #    cmd.exe /c "\"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe\" DotNetFrameworkProject_CE040_CE087\Tour_Management.sln /p:Configuration=Release /p:Platform=\"Any CPU\""
 
+      - name: Build Solution with MSBuild
+        shell: cmd
+        run: |
+           "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" DotNetFrameworkProject_CE040_CE087\Tour_Management.sln /p:Configuration=Release /p:Platform="Any CPU"
