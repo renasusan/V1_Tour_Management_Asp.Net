@@ -23,4 +23,4 @@ jobs:
         run: nuget restore DotNetFrameworkProject_CE040_CE087/Tour_Management.sln
 
       - name: Build Solution
-        run: msbuild DotNetFrameworkProject_CE040_CE087/Tour_Management.slnn /p:Configuration=Release /p:Platform="Any CPU"
+        run: msbuild DotNetFrameworkProject_CE040_CE087/Tour_Management.sln /p:Configuration=Release /p:Platform="Any CPU"
