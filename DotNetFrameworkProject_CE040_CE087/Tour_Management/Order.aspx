@@ -21,7 +21,7 @@
    <form runat="server">
      <div class="container" runat="server" >
         <div class="page-header">
-                <h1>Confirm Tour</h1>
+                <h1>RENAAAA</h1>
         </div>
         <div class="form-horizontal">   
         <div class="form-group"> 
