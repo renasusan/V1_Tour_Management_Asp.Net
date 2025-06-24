@@ -18,7 +18,7 @@ jobs:
         uses: NuGet/setup-nuget@v1
 
       - name: Restore NuGet packages
-        run: nuget restore packages/Tour_Management.sln
+        run: nuget restore DotNetFrameworkProject_CE040_CE087/Tour_Management.sln
 
       - name: Build Solution
-        run: msbuild packages/Tour_Management.sln /p:Configuration=Release /p:Platform="Any CPU"
+        run: msbuild DotNetFrameworkProject_CE040_CE087/Tour_Management.slnn /p:Configuration=Release /p:Platform="Any CPU"
