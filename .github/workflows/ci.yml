@@ -53,6 +53,7 @@ jobs:
           scan-ref: DotNetFrameworkProject_CE040_CE087
 
   docker-build:
+    needs : build
     runs-on: windows-latest
     steps:
       - name: Checkout code
