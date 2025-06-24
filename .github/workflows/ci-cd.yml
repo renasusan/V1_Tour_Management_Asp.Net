@@ -3,6 +3,8 @@ name: CI - .NET Framework Tour Management
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'github/workflows/ci-cd.yml'
   pull_request:
     branches: [main]
 
